@@ -1,0 +1,94 @@
+Design a professional, disciplined, and official-looking university website for VGU NCC Company (National Cadet Corps).
+
+The website should reflect military discipline, leadership, and patriotism, using olive green, white, and saffron as primary colors, with a clean, minimal, and formal layout suitable for an NCC unit.
+
+🏠 Homepage Requirements:
+
+Header with NCC logo, Vivekananda Global University logo, and navigation menu.
+
+Hero section with a cadet/parade background image and the text:
+“Welcome to VGU NCC Company – Unity and Discipline.”
+
+Short introduction about NCC and VGU NCC Company.
+
+Sections for:
+
+Company Officers & ANO
+
+Training & Activities (Drill, Camps, PT, Social Service)
+
+Achievements & Highlights
+
+Latest Notices / Announcements
+
+Photo Gallery preview
+
+Call-to-action buttons:
+Apply for NCC, Selection Process, Check Application Status
+
+📝 Selection / Application Pages:
+
+Page 1 – NCC Application Form
+
+Online enrollment form with student details, physical details, document upload, declaration checkbox, and submit button.
+
+Notice banner showing “Applications Open / Closed” (controlled by admin).
+
+Page 2 – Selection Process & Eligibility
+
+Eligibility criteria
+
+Physical standards
+
+Step-by-step selection process
+
+Important dates table
+
+FAQ section
+
+Page 3 – Application Status / Results
+
+ERP ID / Email input
+
+Application status display (Submitted, Shortlisted, Selected, Not Selected)
+
+🔐 Admin Panel Requirements:
+
+Secure admin login system (username & password).
+
+Admin dashboard with the ability to:
+
+Edit homepage content (about section, notices, dates).
+
+Enable / disable NCC applications.
+
+View, search, and download student applications.
+
+Update application status (Shortlisted, Selected, Rejected).
+
+Add, edit, and delete activities (title, description, date, images).
+
+Upload notices, achievements, and gallery images.
+
+Role-based access (admin only).
+
+🧩 Technical Requirements:
+
+Mobile responsive design.
+
+Clean and accessible UI.
+
+Proper form validation.
+
+Database-backed content (applications, activities, notices).
+
+Admin-controlled dynamic content (no hardcoded data).
+
+📌 Footer:
+
+VGU NCC COY contact details.
+
+Social media links.
+
+Official disclaimer:
+“This website is for information and application purposes only. Final selection is subject to NCC and university authorities.”
