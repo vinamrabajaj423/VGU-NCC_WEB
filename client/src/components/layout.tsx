@@ -1,9 +1,9 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import nccLogo from "@assets/generated_images/ncc_official_emblem.png";
-import vguLogo from "@assets/generated_images/university_logo_crest.png";
-import { Menu, X, Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import nccLogo from "@assets/ncc-flag.jpg";
+import vguLogo from "@assets/vgu-logo.png";
+import { Menu, X, Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import { useState } from "react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -12,6 +12,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   const navItems = [
     { label: "Home", path: "/" },
+    { label: "Resources", path: "/resources" },
     { label: "Selection Process", path: "/process" },
     { label: "Apply Now", path: "/apply" },
     { label: "Check Status", path: "/status" },
@@ -39,7 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex justify-between items-center">
             {/* Logos */}
             <Link href="/" className="flex items-center gap-4 group cursor-pointer">
-              <img src={nccLogo} alt="NCC Logo" className="h-12 w-12 md:h-16 md:w-16 object-contain drop-shadow-sm group-hover:scale-105 transition-transform" />
+              <img src={nccLogo} alt="NCC Logo" className="h-12 w-20 md:h-16 md:w-24 object-cover rounded-sm drop-shadow-sm group-hover:scale-105 transition-transform" />
               <div className="hidden md:block h-12 w-px bg-border mx-2"></div>
               <img src={vguLogo} alt="VGU Logo" className="h-12 w-12 md:h-16 md:w-16 object-contain drop-shadow-sm group-hover:scale-105 transition-transform" />
               <div className="flex flex-col ml-2">
@@ -109,7 +110,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img src={nccLogo} alt="NCC" className="h-12 w-12 brightness-0 invert opacity-90" />
+                <img src={nccLogo} alt="NCC" className="h-12 w-20 object-cover rounded-sm brightness-90 opacity-90" />
                 <div>
                   <h3 className="text-xl font-serif font-bold">VGU NCC</h3>
                   <p className="text-xs opacity-70 uppercase tracking-widest">Unity & Discipline</p>
@@ -126,7 +127,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link href="/process" className="hover:text-white transition-colors">Selection Process</Link></li>
                 <li><Link href="/apply" className="hover:text-white transition-colors">Apply Online</Link></li>
                 <li><Link href="/status" className="hover:text-white transition-colors">Check Status</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">Cadet Handout</Link></li>
+                <li><Link href="/resources" className="hover:text-white transition-colors">Cadet Resources</Link></li>
               </ul>
             </div>
 
@@ -147,9 +148,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 </li>
               </ul>
               <div className="flex gap-4 mt-6">
-                <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-white transition-all"><Facebook className="h-4 w-4" /></a>
-                <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-white transition-all"><Instagram className="h-4 w-4" /></a>
-                <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-white transition-all"><Twitter className="h-4 w-4" /></a>
+                <a href="https://www.instagram.com/vivekananda_ncc_coy_jaipur/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-white transition-all"><Instagram className="h-4 w-4" /></a>
+                <a href="https://www.linkedin.com/in/krishna-nandan-4b671825a/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-white transition-all" title="Lt. Krishna Nandan (ANO)"><Linkedin className="h-4 w-4" /></a>
+                 <a href="https://www.linkedin.com/in/rakshita-rathore-75b267206/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary hover:text-white transition-all" title="Rakshita Rathore (CTO)"><Linkedin className="h-4 w-4" /></a>
               </div>
             </div>
           </div>

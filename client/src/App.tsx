@@ -9,6 +9,7 @@ import Apply from "@/pages/apply";
 import Status from "@/pages/status";
 import Process from "@/pages/process";
 import Admin from "@/pages/admin";
+import Resources from "@/pages/resources";
 
 function Router() {
   return (
@@ -18,6 +19,7 @@ function Router() {
       <Route path="/status" component={Status} />
       <Route path="/process" component={Process} />
       <Route path="/admin" component={Admin} />
+      <Route path="/resources" component={Resources} />
       <Route component={NotFound} />
     </Switch>
   );

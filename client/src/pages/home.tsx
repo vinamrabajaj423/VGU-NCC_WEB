@@ -3,12 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
-import heroBg from "@assets/stock_images/indian_national_cade_55c5a9bf.jpg";
-import officerImg from "@assets/stock_images/military_officers_re_fd1b1f17.jpg";
+import heroBg from "@assets/stock_images/indian_ncc_cadets_gr_6d7f107d.jpg";
+import officerImg from "@assets/stock_images/indian_ncc_army_wing_926d9c6d.jpg";
+import airWingImg from "@assets/stock_images/indian_ncc_air_wing__61076feb.jpg";
 import firingImg from "@assets/stock_images/ncc_cadets_shooting__5716cc19.jpg";
 import cultureImg from "@assets/stock_images/ncc_cadets_cultural__a6f91d9d.jpg";
 import campusImg from "@assets/stock_images/university_campus_bu_9886126c.jpg";
-import { ChevronRight, Calendar, Award, Users, ArrowRight, Flag, Target, Shield, Medal } from "lucide-react";
+import { ChevronRight, Calendar, Award, Users, ArrowRight, Flag, Target, Shield, Medal, Briefcase } from "lucide-react";
 
 export default function Home() {
   return (
@@ -71,43 +72,84 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Leadership Section */}
       <section className="py-20 container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <span className="text-secondary font-bold uppercase tracking-widest text-sm mb-2 block">About Us</span>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Molding Character, Building Leaders</h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                The National Cadet Corps (NCC) is the youth wing of the Indian Armed Forces with its headquarters in New Delhi, India. It is open to school and college students on voluntary basis as a Tri-Services Organization, comprising the Army, the Navy and the Air Force.
-              </p>
-              <p>
-                At Vivekananda Global University, our NCC Company is dedicated to developing character, comradeship, discipline, a secular outlook, the spirit of adventure and ideals of selfless service amongst young citizens.
-              </p>
+        <div className="text-center mb-12">
+           <span className="text-secondary font-bold uppercase tracking-widest text-sm mb-2 block">Leadership</span>
+           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Commanding Officers</h2>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {/* Army Wing */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-border group">
+            <div className="h-64 overflow-hidden relative">
+              <img src={officerImg} alt="Lt. Krishna Nandan" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 m-4 rounded">Army Wing</div>
             </div>
-            
-            <div className="mt-8 p-4 bg-muted/20 border-l-4 border-primary rounded-r-lg">
-              <div className="flex items-start gap-4">
-                <div className="h-12 w-12 rounded-full overflow-hidden shrink-0 border-2 border-primary">
-                  <img src={officerImg} alt="ANO" className="h-full w-full object-cover" />
+            <div className="p-6 text-center">
+               <h3 className="text-xl font-serif font-bold text-primary">Lt. Krishna Nandan</h3>
+               <p className="text-secondary font-medium text-sm uppercase tracking-wide mb-4">Associate NCC Officer (ANO)</p>
+               <div className="flex justify-center gap-2">
+                 <a href="https://www.linkedin.com/in/krishna-nandan-4b671825a/" target="_blank" rel="noopener noreferrer">
+                   <Button variant="outline" size="sm" className="h-8">View Profile</Button>
+                 </a>
+               </div>
+            </div>
+          </div>
+
+          {/* Air Wing */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-border group">
+             <div className="h-64 overflow-hidden relative">
+               <img src={airWingImg} alt="CTO Rakshita Rathore" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+               <div className="absolute top-0 right-0 bg-sky-600 text-white text-xs font-bold px-3 py-1 m-4 rounded">Air Wing</div>
+             </div>
+             <div className="p-6 text-center">
+                <h3 className="text-xl font-serif font-bold text-primary">Rakshita Rathore</h3>
+                <p className="text-secondary font-medium text-sm uppercase tracking-wide mb-4">Caretaker Officer (CTO)</p>
+                <div className="flex justify-center gap-2">
+                  <a href="https://www.linkedin.com/in/rakshita-rathore-75b267206/" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="h-8">View Profile</Button>
+                  </a>
                 </div>
-                <div>
-                  <h4 className="font-serif font-bold text-lg text-primary">Lt. Col. Vikram Singh</h4>
-                  <p className="text-sm text-secondary font-medium uppercase tracking-wide">Associate NCC Officer (ANO)</p>
-                  <p className="text-xs text-muted-foreground mt-1">"We don't just train cadets; we forge the nation's future defense."</p>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NCC Club Section */}
+      <section className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge className="bg-secondary text-white hover:bg-secondary mb-4">Student Body</Badge>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">VGU NCC Club</h2>
+              <p className="text-primary-foreground/80 leading-relaxed mb-6">
+                The VGU NCC Club is the cadet-led body responsible for executing all activities, maintaining discipline, and coordinating events. It serves as the bridge between the command and the cadets.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+                  <div className="h-12 w-12 rounded-full bg-secondary flex items-center justify-center text-xl font-bold text-white">P</div>
+                  <div>
+                    <h4 className="font-bold text-lg">Cadet Sergeant Anushkha</h4>
+                    <p className="text-sm opacity-80">President</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+                  <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center text-xl font-bold text-white">VP</div>
+                  <div>
+                    <h4 className="font-bold text-lg">Under Officer Diksha Bargava</h4>
+                    <p className="text-sm opacity-80">Vice President</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="relative">
-            <div className="absolute -inset-4 border-2 border-secondary/20 rounded-lg transform rotate-2"></div>
-            <img 
-              src={officerImg} 
-              alt="Officers" 
-              className="rounded-lg shadow-xl relative z-10 w-full object-cover h-[400px]"
-            />
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg z-20 max-w-xs border-l-4 border-secondary">
-              <p className="font-serif italic text-primary">"Discipline is the bridge between goals and accomplishment."</p>
+            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-2xl border-4 border-white/20 transform md:rotate-2 hover:rotate-0 transition-transform duration-500">
+               <img src={heroBg} alt="NCC Club" className="w-full h-full object-cover" />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                 <p className="font-serif italic text-lg">"Cadets leading Cadets"</p>
+               </div>
             </div>
           </div>
         </div>
