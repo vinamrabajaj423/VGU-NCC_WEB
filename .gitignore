@@ -1,6 +1,19 @@
+# Dependencies
 node_modules
+client/node_modules
+
+# Build output
 dist
-.DS_Store
+client/dist
 server/public
+
+# OS files
+.DS_Store
+
+# Vite / config backups
 vite.config.ts.*
 *.tar.gz
+
+# Environment variables
+.env
+.env.local
